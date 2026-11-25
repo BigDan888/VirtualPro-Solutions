@@ -1,0 +1,1070 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VirtualPro Solutions | Business Support Made Simple</title>
+
+    <meta name="description" content="VirtualPro Solutions provides professional virtual assistance, administrative support, business operations, customer service and digital business support.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --navy: #142D4E;
+            --gold: #D6A84B;
+            --light: #F4F6F9;
+            --white: #FFFFFF;
+            --dark: #263445;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: var(--dark);
+            line-height: 1.7;
+            background: var(--white);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        /* HEADER */
+
+        header {
+            background: var(--white);
+            padding: 18px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--navy);
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        .btn-primary:hover {
+            background: #e8bd6b;
+        }
+
+        .btn-outline {
+            border: 2px solid var(--white);
+            color: var(--white);
+            margin-left: 10px;
+        }
+
+        /* HERO SECTION */
+
+        .hero {
+            background: linear-gradient(120deg, #142D4E, #234B70);
+            color: var(--white);
+            padding: 110px 0;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero h1 {
+            font-size: clamp(35px, 5vw, 55px);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #E1EAF3;
+        }
+
+        .tagline {
+            color: var(--gold);
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        /* GENERAL SECTIONS */
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            color: var(--navy);
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #687586;
+        }
+
+        /* ABOUT */
+
+        .about-content {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            margin-bottom: 18px;
+        }
+
+        .highlight {
+            color: var(--navy);
+            font-weight: bold;
+        }
+
+        /* SERVICES */
+
+        .services {
+            background: var(--light);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 30px 25px;
+            border-radius: 10px;
+            border: 1px solid #E5EAF0;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .service-icon {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color: var(--navy);
+            margin-bottom: 12px;
+        }
+
+        .service-card ul {
+            padding-left: 20px;
+            color: #687586;
+        }
+
+        /* WHY US */
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .why-card {
+            padding: 20px;
+            background: var(--light);
+            border-radius: 8px;
+        }
+
+        .why-card h3 {
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+
+        /* PROCESS */
+
+        .process {
+            background: var(--light);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .process-card {
+            background: white;
+            padding: 25px 15px;
+            border-radius: 8px;
+        }
+
+        .process-number {
+            background: var(--gold);
+            color: var(--navy);
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        /* PRICING */
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .price-card {
+            border: 1px solid #E0E5EC;
+            border-radius: 10px;
+            padding: 30px 25px;
+            text-align: center;
+        }
+
+        .price-card h3 {
+            color: var(--navy);
+            margin-bottom: 12px;
+        }
+
+        .price-card p {
+            margin-bottom: 20px;
+        }
+
+        .price-card ul {
+            list-style: none;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .price-card li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .price-card.featured {
+            border: 2px solid var(--gold);
+        }
+
+        .quote {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--navy);
+        }
+
+        /* CONTACT */
+
+        .contact {
+            background: var(--light);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info h3 {
+            color: var(--navy);
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+        }
+
+        form {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 15px;
+            border: 1px solid #D5DCE5;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 15px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        form button {
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: var(--navy);
+            color: white;
+            text-align: center;
+            padding: 35px 15px;
+        }
+
+        footer p {
+            margin: 7px 0;
+        }
+
+        footer a {
+            color: var(--gold);
+        }
+
+        /* MOBILE RESPONSIVENESS */
+
+        @media(max-width: 850px) {
+
+            .service-grid,
+            .pricing-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width: 600px) {
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 25px;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.08);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .service-grid,
+            .pricing-grid,
+            .why-grid,
+            .contact-grid,
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 75px 0;
+            }
+
+            .btn {
+                margin: 5px 0;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .section-title h2 {
+                font-size: 27px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+    <div class="container">
+        <nav>
+
+            <a href="#home" class="logo">
+                VirtualPro<span> Solutions</span>
+            </a>
+
+            <button class="menu-btn" id="menuBtn"
+                aria-label="Toggle navigation" aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why-us">Why Choose Us</a></li>
+                <li><a href="#pricing">Packages</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+    <div class="container">
+
+        <div class="hero-content">
+
+            <p class="tagline">
+                VIRTUAL ASSISTANCE | BUSINESS SUPPORT | OPERATIONS
+            </p>
+
+            <h1>
+                Your Business.<br>
+                Our Expertise.<br>
+                <span>Seamless Operations.</span>
+            </h1>
+
+            <p>
+                We help entrepreneurs, startups and growing businesses
+                simplify their daily operations through reliable virtual
+                assistance, administrative support and digital business
+                solutions.
+            </p>
+
+            <a href="#services" class="btn btn-primary">
+                Explore Our Services
+            </a>
+
+            <a href="#contact" class="btn btn-outline">
+                Get In Touch
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>About VirtualPro Solutions</h2>
+            <p>Your trusted partner for professional business support.</p>
+        </div>
+
+        <div class="about-content">
+
+            <p>
+                VirtualPro Solutions is a virtual assistance and
+                business support company committed to helping
+                businesses operate more efficiently.
+            </p>
+
+            <p>
+                We provide professional administrative assistance,
+                business operations support, customer service,
+                procurement administration and digital support
+                services to individuals, entrepreneurs, startups
+                and established organisations.
+            </p>
+
+            <p>
+                Our goal is to help clients save valuable time,
+                improve productivity, organise their processes
+                and focus on what matters most: <span class="highlight">
+                growing their businesses.</span>
+            </p>
+
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Our Services</h2>
+            <p>Professional support designed around your business needs.</p>
+        </div>
+
+        <div class="service-grid">
+
+            <div class="service-card">
+                <div class="service-icon">💻</div>
+                <h3>Virtual Assistant Services</h3>
+                <ul>
+                    <li>Email management</li>
+                    <li>Calendar scheduling</li>
+                    <li>Data entry</li>
+                    <li>Online research</li>
+                    <li>Meeting coordination</li>
+                    <li>Document preparation</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <h3>Administrative & Operations</h3>
+                <ul>
+                    <li>Business administration</li>
+                    <li>Workflow coordination</li>
+                    <li>SOP documentation</li>
+                    <li>Task management</li>
+                    <li>Business reporting</li>
+                    <li>Records management</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📱</div>
+                <h3>Social Media Support</h3>
+                <ul>
+                    <li>Content scheduling</li>
+                    <li>Content calendars</li>
+                    <li>Community management</li>
+                    <li>Basic Canva designs</li>
+                    <li>Social media reporting</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🎧</div>
+                <h3>Customer Support</h3>
+                <ul>
+                    <li>Email customer support</li>
+                    <li>Customer enquiries</li>
+                    <li>Live chat assistance</li>
+                    <li>Complaint documentation</li>
+                    <li>Customer follow-up</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🚗</div>
+                <h3>Procurement & Fleet Support</h3>
+                <ul>
+                    <li>Vendor management</li>
+                    <li>Purchase tracking</li>
+                    <li>Inventory monitoring</li>
+                    <li>Fleet maintenance records</li>
+                    <li>Vehicle expense tracking</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📈</div>
+                <h3>Data & Reporting</h3>
+                <ul>
+                    <li>Excel management</li>
+                    <li>Data entry and cleaning</li>
+                    <li>Business reports</li>
+                    <li>Expense tracking</li>
+                    <li>Dashboard preparation</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+
+<section id="why-us">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Why Choose VirtualPro Solutions?</h2>
+            <p>We make business support simple, reliable and efficient.</p>
+        </div>
+
+        <div class="why-grid">
+
+            <div class="why-card">
+                <h3>✓ Professional Support</h3>
+                <p>We are committed to delivering organised and dependable support.</p>
+            </div>
+
+            <div class="why-card">
+                <h3>✓ Time Efficiency</h3>
+                <p>We help you spend less time on routine tasks and more time growing your business.</p>
+            </div>
+
+            <div class="why-card">
+                <h3>✓ Flexible Solutions</h3>
+                <p>Our services can be tailored to your business requirements.</p>
+            </div>
+
+            <div class="why-card">
+                <h3>✓ Confidentiality</h3>
+                <p>We value client privacy and responsible information management.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- HOW WE WORK -->
+
+<section class="process">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>How We Work</h2>
+            <p>Getting started with us is simple.</p>
+        </div>
+
+        <div class="process-grid">
+
+            <div class="process-card">
+                <div class="process-number">1</div>
+                <h3>Contact Us</h3>
+                <p>Tell us about your business and support needs.</p>
+            </div>
+
+            <div class="process-card">
+                <div class="process-number">2</div>
+                <h3>Consultation</h3>
+                <p>We discuss your requirements and expectations.</p>
+            </div>
+
+            <div class="process-card">
+                <div class="process-number">3</div>
+                <h3>Get Started</h3>
+                <p>We agree on the services, scope and timeline.</p>
+            </div>
+
+            <div class="process-card">
+                <div class="process-number">4</div>
+                <h3>We Deliver</h3>
+                <p>We provide organised and professional support.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PACKAGES -->
+
+<section id="pricing">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Our Service Packages</h2>
+            <p>Flexible support options for businesses of different sizes.</p>
+        </div>
+
+        <div class="pricing-grid">
+
+            <div class="price-card">
+                <h3>Starter</h3>
+                <p>For individuals and small businesses.</p>
+                <div class="quote">Custom Quote</div>
+                <ul>
+                    <li>✓ Email management</li>
+                    <li>✓ Calendar scheduling</li>
+                    <li>✓ Data entry</li>
+                    <li>✓ Document preparation</li>
+                    <li>✓ Administrative support</li>
+                </ul>
+                <a href="#contact" class="btn btn-primary">Get Started</a>
+            </div>
+
+            <div class="price-card featured">
+                <h3>Professional</h3>
+                <p>For growing businesses and entrepreneurs.</p>
+                <div class="quote">Custom Quote</div>
+                <ul>
+                    <li>✓ Everything in Starter</li>
+                    <li>✓ Customer support</li>
+                    <li>✓ Meeting coordination</li>
+                    <li>✓ Business documentation</li>
+                    <li>✓ Task and project tracking</li>
+                </ul>
+                <a href="#contact" class="btn btn-primary">Get Started</a>
+            </div>
+
+            <div class="price-card">
+                <h3>Executive</h3>
+                <p>For businesses requiring advanced support.</p>
+                <div class="quote">Custom Quote</div>
+                <ul>
+                    <li>✓ Executive assistance</li>
+                    <li>✓ Operations coordination</li>
+                    <li>✓ Vendor follow-up</li>
+                    <li>✓ Business reporting</li>
+                    <li>✓ Workflow management</li>
+                </ul>
+                <a href="#contact" class="btn btn-primary">Get Started</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CLIENT TESTIMONIALS -->
+
+<section id="testimonials">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>What Our Clients Say</h2>
+            <p>We believe in dependable service and lasting business relationships.</p>
+        </div>
+
+        <div class="service-grid">
+
+            <div class="service-card">
+                <div class="service-icon">⭐</div>
+                <h3>Professional Support</h3>
+                <p>
+                    "VirtualPro Solutions made managing our
+                    administrative responsibilities much easier.
+                    Their organised approach helped us stay on track."
+                </p>
+                <br>
+                <strong>Client testimonial placeholder</strong>
+                <p>Business Owner</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">⭐</div>
+                <h3>Reliable Assistance</h3>
+                <p>
+                    "Having reliable administrative support allows
+                    us to focus more on our business priorities
+                    and daily operations."
+                </p>
+                <br>
+                <strong>Client testimonial placeholder</strong>
+                <p>Entrepreneur</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">⭐</div>
+                <h3>Better Organisation</h3>
+                <p>
+                    "We value structured processes, proper
+                    documentation and timely communication.
+                    These are essential to running a business."
+                </p>
+                <br>
+                <strong>Client testimonial placeholder</strong>
+                <p>Business Professional</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ONLINE PAYMENT -->
+
+<section id="payment">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Make a Payment</h2>
+            <p>
+                Ready to work with us? Select your service
+                package and proceed to secure payment.
+            </p>
+        </div>
+
+        <div class="pricing-grid">
+
+            <div class="price-card">
+                <h3>Starter Package</h3>
+                <p>Basic virtual assistance and administration.</p>
+                <div class="quote">₦75,000</div>
+                <br>
+                <a href="mailto:virtualprosolutionss@gmail.com?subject=Starter%20Package%20Payment"
+                   class="btn btn-primary">
+                    Request Payment
+                </a>
+            </div>
+
+            <div class="price-card featured">
+                <h3>Professional Package</h3>
+                <p>Extended business and administrative support.</p>
+                <div class="quote">₦150,000</div>
+                <br>
+                <a href="mailto:virtualprosolutionss@gmail.com?subject=Professional%20Package%20Payment"
+                   class="btn btn-primary">
+                    Request Payment
+                </a>
+            </div>
+
+            <div class="price-card">
+                <h3>Executive Package</h3>
+                <p>Advanced executive and operations support.</p>
+                <div class="quote">₦250,000</div>
+                <br>
+                <a href="mailto:virtualprosolutionss@gmail.com?subject=Executive%20Package%20Payment"
+                   class="btn btn-primary">
+                    Request Payment
+                </a>
+            </div>
+
+        </div>
+
+        <p style="text-align:center; margin-top:25px;">
+            Final service scope and pricing will be confirmed
+            before payment.
+        </p>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Let's Work Together</h2>
+            <p>Have a business support need? We would love to hear from you.</p>
+        </div>
+
+        <div class="contact-grid">
+
+            <div class="contact-info">
+
+                <h3>Get In Touch</h3>
+
+                <p>
+                    Let VirtualPro Solutions help you simplify your
+                    business operations and improve productivity.
+                </p>
+
+                <p>
+                    <strong>Email:</strong><br>
+                    <a href="mailto:virtualprosolutionss@gmail.com">
+                        virtualprosolutionss@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    <strong>Business:</strong><br>
+                    VirtualPro Solutions
+                </p>
+
+                <p>
+                    <strong>Services:</strong><br>
+                    Virtual Assistance, Administration,
+                    Business Operations and Digital Support.
+                </p>
+
+            </div>
+
+            <form id="contactForm">
+
+                <h3>Send Us A Message</h3>
+
+                <br>
+
+                <input type="text" id="name"
+                    placeholder="Your Full Name" required>
+
+                <input type="email" id="email"
+                    placeholder="Your Email Address" required>
+
+                <input type="text" id="business"
+                    placeholder="Company / Business Name (Optional)">
+
+                <select id="service" required>
+                    <option value="">Select a Service</option>
+                    <option>Virtual Assistant Services</option>
+                    <option>Administrative & Operations Support</option>
+                    <option>Social Media Support</option>
+                    <option>Customer Support</option>
+                    <option>Procurement & Fleet Support</option>
+                    <option>Data & Reporting</option>
+                    <option>Other Enquiry</option>
+                </select>
+
+                <textarea id="message"
+                    placeholder="Tell us how we can help your business..."
+                    required></textarea>
+
+                <button type="submit" class="btn btn-primary">
+                    Send Enquiry
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h2>VirtualPro Solutions</h2>
+
+    <p>Your Business. Our Expertise. Seamless Operations.</p>
+
+    <p>
+        Email:
+        <a href="mailto:virtualprosolutionss@gmail.com">
+            virtualprosolutionss@gmail.com
+        </a>
+    </p>
+
+    <p>
+        © <span id="year"></span> VirtualPro Solutions.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+    // Mobile navigation menu
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", function() {
+
+        navLinks.classList.toggle("active");
+
+        const expanded = navLinks.classList.contains("active");
+
+        menuBtn.setAttribute("aria-expanded", expanded);
+
+    });
+
+    // Close mobile menu after clicking a link
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+        link.addEventListener("click", function() {
+
+            navLinks.classList.remove("active");
+            menuBtn.setAttribute("aria-expanded", "false");
+
+        });
+
+    });
+
+    // Automatic copyright year
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+    // Contact form
+
+    document.getElementById("contactForm").addEventListener(
+        "submit", function(event) {
+
+        event.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const business = document.getElementById("business").value.trim();
+        const service = document.getElementById("service").value;
+        const message = document.getElementById("message").value.trim();
+
+        const subject = encodeURIComponent(
+            "New Business Enquiry - " + service
+        );
+
+        const body = encodeURIComponent(
+            "Name: " + name +
+            "\nEmail: " + email +
+            "\nBusiness: " + business +
+            "\nService Required: " + service +
+            "\n\nMessage:\n" + message
+        );
+
+        window.location.href =
+            "mailto:virtualprosolutionss@gmail.com" +
+            "?subject=" + subject +
+            "&body=" + body;
+
+    });
+
+</script>
+
+</body>
+</html>
